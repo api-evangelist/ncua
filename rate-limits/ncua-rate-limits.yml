@@ -1,0 +1,29 @@
+name: NCUA Rate Limits
+description: The National Credit Union Administration (NCUA) does not publicly publish formal rate limits for its public-facing data tools and APIs. The public tools (credit union locator, custom query, quarterly data downloads, CUSO registry) are accessible without authentication and without documented rate caps. The CUOnline bulk data web service, which requires registration, is subject to time restrictions defined in NCUA's Rules of Behavior.
+url: https://ncua.gov/data
+created: '2026-06-13'
+modified: '2026-06-13'
+rateLimits:
+  - name: Public Tools - Undocumented
+    description: No formal rate limits are published for the NCUA credit union locator, custom query tool, quarterly data downloads, CUSO registry, or other public-facing web applications. These tools are designed for general public use but are not intended for heavy automated scraping.
+    scope: Public data tools and web applications
+    limit: Not documented
+    window: Not documented
+    enforcement: Not documented
+  - name: CUOnline Bulk Data Web Service - Time Restrictions
+    description: The CUOnline data web service for registered bulk data users is subject to time restrictions as specified in the NCUA Rules of Behavior document. Specific time windows are communicated to registered users upon approval. IP-based access control is enforced; only the registered external IP address is permitted to access the service.
+    scope: CUOnline Data Web Service (registered bulk users only)
+    limit: Time-restricted access windows per Rules of Behavior
+    window: Defined in Rules of Behavior communicated at registration
+    enforcement: IP allowlist; time-window enforcement; Rules of Behavior agreement required
+    contact: 5300@ncua.gov
+  - name: Quarterly Data Downloads - Bulk ZIP Files
+    description: Quarterly call report data is provided as bulk ZIP file downloads from static URLs. There are no documented rate limits on downloading these files, but they are large compressed archives meant for one-time quarterly retrieval rather than continuous polling.
+    scope: Quarterly ZIP file downloads
+    limit: Not documented
+    window: Quarterly release cadence
+    enforcement: Not documented
+notes:
+  - NCUA is a federal government agency; its public data access is governed by open data policy rather than commercial rate limiting
+  - For the credit union locator JSON API (used by the mapping.ncua.gov tool), no published rate limits exist; the API is undocumented and subject to change
+  - For high-volume or automated data needs, contacting BImail@ncua.gov is recommended

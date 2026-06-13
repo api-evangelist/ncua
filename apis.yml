@@ -1,0 +1,126 @@
+aid: ncua
+name: National Credit Union Administration (NCUA)
+description: The National Credit Union Administration (NCUA) is the independent federal agency that regulates, charters, and supervises federal credit unions. NCUA provides public REST APIs and data services for accessing credit union call report data, financial performance metrics, membership statistics, credit union locator information, and NCUA examination and enforcement findings.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/ncua/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+type: Index
+tags:
+  - Federal Government
+  - Credit Unions
+  - Financial Data
+  - Call Reports
+  - Banking
+  - Regulatory Data
+apis:
+  - aid: ncua:credit-union-locator-api
+    name: NCUA Credit Union Locator API
+    description: A JSON-based API that powers the NCUA Credit Union Locator tool, enabling searches for federally insured credit union offices by name, charter number, and address with radius-based geographic queries. Returns office locations, contact details, coordinates, and site functions.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://mapping.ncua.gov/
+    baseURL: https://mapping.ncua.gov/
+    tags:
+      - Credit Union Locator
+      - Geographic Search
+      - Credit Union Offices
+    properties:
+      - type: Documentation
+        url: https://mapping.ncua.gov/
+      - type: OpenAPI
+        url: https://mapping.ncua.gov/
+    contact:
+      - FN: NCUA Help
+        email: OneStop@ncua.gov
+  - aid: ncua:call-report-data-api
+    name: NCUA 5300 Call Report Data
+    description: Quarterly publicly available financial performance data for all federally insured credit unions based on their quarterly Call Report (Form 5300) filings. Data is available as bulk ZIP downloads in comma-delimited text format dating back to March 1994, covering assets, loans, shares, investments, net income, membership, and more.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data
+    baseURL: https://www.ncua.gov/files/publications/analysis/
+    tags:
+      - Call Report
+      - Financial Data
+      - Quarterly Data
+      - Bulk Download
+    properties:
+      - type: Documentation
+        url: https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data
+    contact:
+      - FN: NCUA Call Report Support
+        email: 5300@ncua.gov
+  - aid: ncua:custom-query-api
+    name: NCUA Custom Data Query Tool
+    description: An interactive web application allowing users to query and filter financial information collected during the 5300 Call Report cycle. Supports filtering by charter number, region, credit union type, city, state, zip code, total assets, total loans, total shares, total investments, commercial loans, and net income for reporting cycles back to 2004.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://webapps2.ncua.gov/CustomQuery/
+    baseURL: https://webapps2.ncua.gov/CustomQuery/
+    tags:
+      - Custom Query
+      - Financial Metrics
+      - Call Report
+      - Data Filtering
+    properties:
+      - type: Documentation
+        url: https://webapps2.ncua.gov/CustomQuery/
+    contact:
+      - FN: NCUA Data Team
+        email: BImail@ncua.gov
+  - aid: ncua:cuonline-data-web-service
+    name: NCUA CUOnline Data Web Service
+    description: A bulk data web service providing the same financial data as the quarterly Call Report ZIP files but in a dynamic, real-time fashion as submissions are validated. Designed for large industry data aggregators and requires registration including a technical point of contact, static external IP address, and adherence to NCUA Rules of Behavior.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://ncua.gov/regulation-supervision/regulatory-reporting/cuonline
+    baseURL: https://cuonline.ncua.gov/
+    tags:
+      - Bulk Data
+      - Web Service
+      - Real-Time Data
+      - Call Report
+    properties:
+      - type: Documentation
+        url: https://ncua.gov/regulation-supervision/regulatory-reporting/cuonline
+    contact:
+      - FN: NCUA Call Report Support
+        email: 5300@ncua.gov
+  - aid: ncua:cuso-registry-api
+    name: NCUA CUSO Registry
+    description: A web-based system and searchable registry of Credit Union Service Organizations (CUSOs) that provide information about their services, financials, and relationships with credit unions. Accessible through a public search interface.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://cusoregistry.ncua.gov/Search/Search
+    baseURL: https://cusoregistry.ncua.gov/
+    tags:
+      - CUSO
+      - Credit Union Service Organizations
+      - Registry
+    properties:
+      - type: Documentation
+        url: https://cusoregistry.ncua.gov/Search/Search
+    contact:
+      - FN: CUSO Registry
+        email: cusoregistry@ncua.gov
+common:
+  - type: Website
+    url: https://ncua.gov/
+  - type: Documentation
+    url: https://ncua.gov/data
+  - type: GitHubOrg
+    url: https://github.com/ContinuityControl/ncua
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/national-credit-union-administration
+  - type: Blog
+    url: https://ncua.gov/news/latest-news
+  - type: Pricing
+    url: plans/ncua-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/ncua-rate-limits.yml
+  - type: FinOps
+    url: finops/ncua-finops.yml
+  - type: X
+    url: https://x.com/TheNCUA
+  - type: Plans
+    url: plans/ncua-plans-pricing.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

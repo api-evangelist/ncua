@@ -1,0 +1,43 @@
+name: NCUA FinOps
+description: Financial operations considerations for integrating with NCUA data services. All NCUA public APIs and data tools are provided at no cost as a federal government agency. Cost management focuses on infrastructure, storage, and processing costs on the consumer side when handling large quarterly bulk data downloads.
+url: https://ncua.gov/data
+created: '2026-06-13'
+modified: '2026-06-13'
+finops:
+  - name: No Direct API Costs
+    description: NCUA does not charge fees for access to any of its public data APIs, tools, or downloads. There are no subscription tiers, overage charges, or usage-based billing. Budget considerations are limited to internal infrastructure costs for consuming and storing the data.
+    cost: 0
+    currency: USD
+    billing: None
+  - name: Quarterly Bulk Data Storage
+    description: The quarterly 5300 Call Report ZIP files contain comma-delimited data for all federally insured credit unions going back to March 1994. Organizations ingesting the full historical dataset should plan for storage costs. Each quarterly ZIP typically contains multiple CSV tables. Full historical archive represents substantial data volume.
+    cost: Variable - consumer infrastructure only
+    currency: USD
+    considerations:
+      - Storage costs for historical data (1994-present, ~130+ quarters)
+      - ETL and processing compute costs for bulk CSV ingestion
+      - Database hosting costs for queryable data warehouse
+      - Bandwidth costs for downloading large ZIP archives quarterly
+  - name: CUOnline Web Service Integration
+    description: Integrating with the CUOnline bulk data web service requires engineering effort for registration, IP configuration, and building a compliant web service client per NCUA specifications. No API fees, but implementation costs apply.
+    cost: 0 direct; engineering hours for integration
+    currency: USD
+    considerations:
+      - One-time engineering effort to build compliant web service client
+      - IP address management for allowlisted access
+      - Ongoing compliance with NCUA Rules of Behavior
+      - Technical point of contact staffing requirement
+  - name: Credit Union Locator API
+    description: The undocumented JSON API behind mapping.ncua.gov is free but carries implementation risk as it is not officially published. Organizations relying on it should budget for maintenance when NCUA updates its underlying schema.
+    cost: 0 direct; maintenance risk
+    currency: USD
+    considerations:
+      - No direct cost
+      - API is unofficial and schema changes without notice
+      - Budget for periodic maintenance when API changes
+      - Consider third-party wrappers (e.g., Ruby gem) for abstraction
+recommendations:
+  - Use the official quarterly ZIP downloads for bulk historical analysis; they are stable, versioned, and officially supported
+  - For real-time needs, register for the CUOnline Data Web Service via 5300@ncua.gov
+  - Cache credit union locator results aggressively given the unofficial nature of the underlying API
+  - Contact BImail@ncua.gov to request improvements to data access or additional machine-readable formats

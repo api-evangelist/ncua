@@ -1,0 +1,37 @@
+name: NCUA Plans and Pricing
+description: The National Credit Union Administration (NCUA) provides its public data APIs and data services at no cost as a federal government agency. All publicly available call report data, credit union locator, custom query tools, and CUSO registry are free to access. The CUOnline bulk data web service requires registration but carries no fees.
+url: https://ncua.gov/data
+created: '2026-06-13'
+modified: '2026-06-13'
+plans:
+  - name: Public Access - No Cost
+    description: All NCUA public data tools and APIs are provided free of charge as part of the agency's mandate to provide open, machine-readable government data. This includes quarterly call report ZIP downloads, the custom query tool, the credit union locator, the CUSO registry, and aggregate financial performance reports.
+    url: https://ncua.gov/data
+    price: 0
+    priceCurrency: USD
+    rateLimits: []
+    features:
+      - Quarterly 5300 Call Report data downloads (CSV/ZIP) back to March 1994
+      - Custom Data Query Tool for financial metrics
+      - Credit Union Locator with geographic search
+      - CUSO Registry search
+      - Aggregate Financial Performance Reports
+      - Corporate Credit Union 5310 Call Report Data
+      - Merger Activity and Chartering Activity data
+      - State and Economic Data spreadsheets
+      - Unclaimed Deposits listing
+  - name: CUOnline Bulk Data Web Service - Registered
+    description: The CUOnline data web service is free but requires registration. It is intended for large industry data aggregators needing dynamic, real-time access to call report data as submissions are validated. Registration requires submitting a technical point of contact name, the external IP address of the web service client, and agreeing to NCUA Rules of Behavior including time restrictions.
+    url: https://ncua.gov/regulation-supervision/regulatory-reporting/cuonline
+    price: 0
+    priceCurrency: USD
+    rateLimits:
+      - Time restrictions apply per NCUA Rules of Behavior
+    features:
+      - Real-time access to call report data upon validated submission
+      - Same data scope as quarterly ZIP downloads
+      - Dynamic data that updates as corrections are made
+      - Bulk data access suitable for large-scale data aggregation
+    contact:
+      email: 5300@ncua.gov
+      description: Contact to initiate registration and receive Rules of Behavior documentation
