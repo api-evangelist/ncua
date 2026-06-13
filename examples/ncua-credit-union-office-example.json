@@ -1,0 +1,38 @@
+[
+  {
+    "CU_NAME": "Federal Employees Credit Union",
+    "AddressLongitude": -77.036871,
+    "AddressLatitude": 38.907192,
+    "CU_SITENAME": "Main Office",
+    "CU_NUMBER": 12345,
+    "City": "Washington",
+    "Country": "US",
+    "IsMainOffice": true,
+    "Phone": "202-555-0100",
+    "SiteFunctions": "Member Services;Drive Through",
+    "SiteId": 67890,
+    "State": "DC",
+    "URL": "https://example.cu.org",
+    "Zipcode": "20001",
+    "distance": -1,
+    "Street": "125 Federal Way"
+  },
+  {
+    "CU_NAME": "Community First Credit Union",
+    "AddressLongitude": -87.629799,
+    "AddressLatitude": 41.878113,
+    "CU_SITENAME": "Downtown Branch",
+    "CU_NUMBER": 54321,
+    "City": "Chicago",
+    "Country": "US",
+    "IsMainOffice": false,
+    "Phone": "312-555-0199",
+    "SiteFunctions": "Member Services;ATM",
+    "SiteId": 11223,
+    "State": "IL",
+    "URL": "https://communityfirstcu.example.org",
+    "Zipcode": "60601",
+    "distance": 1.3,
+    "Street": "200 W Madison St"
+  }
+]

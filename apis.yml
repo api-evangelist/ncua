@@ -29,7 +29,7 @@ apis:
       - type: Documentation
         url: https://mapping.ncua.gov/
       - type: OpenAPI
-        url: https://mapping.ncua.gov/
+        url: https://raw.githubusercontent.com/api-evangelist/ncua/refs/heads/main/openapi/ncua-credit-union-locator-api-openapi.yml
     contact:
       - FN: NCUA Help
         email: OneStop@ncua.gov

@@ -1,0 +1,200 @@
+openapi: 3.0.3
+info:
+  title: NCUA Credit Union Locator API
+  description: >
+    A JSON-based API that powers the NCUA Credit Union Locator tool, enabling searches
+    for federally insured credit union offices by name, charter number, and address with
+    radius-based geographic queries. Returns office locations, contact details,
+    coordinates, and site functions. Operated by the National Credit Union Administration (NCUA).
+  version: 1.0.0
+  contact:
+    name: NCUA Help
+    email: OneStop@ncua.gov
+  license:
+    name: Public Domain
+    url: https://www.usa.gov/government-works
+externalDocs:
+  description: NCUA Credit Union Locator
+  url: https://mapping.ncua.gov/
+
+servers:
+  - url: https://mapping.ncua.gov
+    description: NCUA Mapping Production Server
+
+paths:
+  /findCUByRadius.aspx:
+    post:
+      operationId: findCreditUnionByRadius
+      summary: Search for credit union offices
+      description: >
+        Search for federally insured credit union offices by credit union name,
+        charter number, or geographic address with an optional radius filter.
+        Returns a JSON array of matching office locations with coordinates and contact details.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - address
+                - type
+              properties:
+                address:
+                  type: string
+                  description: >
+                    The search value. Depending on `type`, this is a credit union name,
+                    charter number, or street address.
+                  example: "125 Main St., Anywhere, CT"
+                type:
+                  type: string
+                  description: >
+                    The type of search to perform.
+                    - `cuname` — search by credit union name
+                    - `cunumber` — search by charter number
+                    - `address` — search by street address with radius
+                  enum:
+                    - cuname
+                    - cunumber
+                    - address
+                  example: address
+                radius:
+                  type: integer
+                  description: >
+                    Search radius in miles. Only relevant when `type` is `address`.
+                    Defaults to 100 miles if omitted.
+                  default: 100
+                  example: 50
+      responses:
+        '200':
+          description: A JSON array of credit union offices matching the query.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CreditUnionOffice'
+              example:
+                - CU_NAME: "Federal Employees Credit Union"
+                  AddressLongitude: -77.036871
+                  AddressLatitude: 38.907192
+                  CU_SITENAME: "Main Office"
+                  CU_NUMBER: 12345
+                  City: "Washington"
+                  Country: "US"
+                  IsMainOffice: true
+                  Phone: "202-555-0100"
+                  SiteFunctions: "Member Services;Drive Through"
+                  SiteId: 67890
+                  State: "DC"
+                  URL: "https://example.cu.org"
+                  Zipcode: "20001"
+                  distance: 2.5
+                  Street: "125 Federal Way"
+        '500':
+          description: Internal server error from the NCUA service.
+
+  /SingleResult.aspx:
+    get:
+      operationId: getCreditUnionDetails
+      summary: Get credit union details by charter number
+      description: >
+        Retrieve detailed information for a specific credit union by its NCUA charter number.
+        Returns an HTML page with financial summary, membership, and charter information.
+        This endpoint is intended for browser consumption and is used by the Credit Union Locator tool.
+      parameters:
+        - name: ID
+          in: query
+          required: true
+          description: The NCUA charter number of the credit union.
+          schema:
+            type: integer
+          example: 12345
+      responses:
+        '200':
+          description: HTML page containing credit union details.
+          content:
+            text/html:
+              schema:
+                type: string
+        '500':
+          description: Internal server error from the NCUA service.
+
+components:
+  schemas:
+    CreditUnionOffice:
+      type: object
+      description: A federally insured credit union office location.
+      properties:
+        CU_NAME:
+          type: string
+          description: The credit union's official name.
+          example: "Federal Employees Credit Union"
+        AddressLongitude:
+          type: number
+          format: double
+          description: Longitude coordinate of the office address.
+          example: -77.036871
+        AddressLatitude:
+          type: number
+          format: double
+          description: Latitude coordinate of the office address.
+          example: 38.907192
+        CU_SITENAME:
+          type: string
+          description: Name of this specific office or branch site.
+          example: "Main Office"
+        CU_NUMBER:
+          type: integer
+          description: The NCUA charter number uniquely identifying this credit union.
+          example: 12345
+        City:
+          type: string
+          description: City where the office is located.
+          example: "Washington"
+        Country:
+          type: string
+          description: Country code for the office location.
+          example: "US"
+        IsMainOffice:
+          type: boolean
+          description: Indicates whether this location is the credit union's main office.
+          example: true
+        Phone:
+          type: string
+          description: Phone number for the office.
+          example: "202-555-0100"
+        SiteFunctions:
+          type: string
+          description: >
+            Semicolon-delimited list of services available at this office.
+            Known values include: Member Services, Drive Through, ATM.
+          example: "Member Services;Drive Through"
+        SiteId:
+          type: integer
+          description: Unique identifier for this specific office site.
+          example: 67890
+        State:
+          type: string
+          description: Two-letter state abbreviation where the office is located.
+          example: "DC"
+        URL:
+          type: string
+          format: uri
+          description: The credit union's website URL.
+          example: "https://example.cu.org"
+        Zipcode:
+          type: string
+          description: ZIP code for the office location.
+          example: "20001"
+        distance:
+          type: number
+          format: double
+          description: >
+            Distance in miles from the queried address to this office. A negative value
+            indicates that no distance calculation was applicable (e.g., name or charter search).
+          example: 2.5
+        Street:
+          type: string
+          description: Street address of the office.
+          example: "125 Federal Way"

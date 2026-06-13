@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ncua/main/json-schema/ncua-credit-union-office-schema.json",
+  "title": "NCUA Credit Union Office",
+  "description": "Schema for a federally insured credit union office as returned by the NCUA Credit Union Locator API.",
+  "type": "object",
+  "properties": {
+    "CU_NAME": {
+      "type": "string",
+      "description": "The credit union's official name."
+    },
+    "AddressLongitude": {
+      "type": "number",
+      "description": "Longitude coordinate of the office address.",
+      "minimum": -180,
+      "maximum": 180
+    },
+    "AddressLatitude": {
+      "type": "number",
+      "description": "Latitude coordinate of the office address.",
+      "minimum": -90,
+      "maximum": 90
+    },
+    "CU_SITENAME": {
+      "type": "string",
+      "description": "Name of this specific office or branch site."
+    },
+    "CU_NUMBER": {
+      "type": "integer",
+      "description": "The NCUA charter number uniquely identifying this credit union.",
+      "minimum": 1
+    },
+    "City": {
+      "type": "string",
+      "description": "City where the office is located."
+    },
+    "Country": {
+      "type": "string",
+      "description": "Country code for the office location.",
+      "maxLength": 3
+    },
+    "IsMainOffice": {
+      "type": "boolean",
+      "description": "Indicates whether this location is the credit union's main office."
+    },
+    "Phone": {
+      "type": "string",
+      "description": "Phone number for the office."
+    },
+    "SiteFunctions": {
+      "type": "string",
+      "description": "Semicolon-delimited list of services at this office (e.g., Member Services;Drive Through;ATM)."
+    },
+    "SiteId": {
+      "type": "integer",
+      "description": "Unique identifier for this specific office site."
+    },
+    "State": {
+      "type": "string",
+      "description": "Two-letter state abbreviation.",
+      "maxLength": 2
+    },
+    "URL": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "The credit union's website URL."
+    },
+    "Zipcode": {
+      "type": "string",
+      "description": "ZIP code for the office location.",
+      "pattern": "^\\d{5}(-\\d{4})?$"
+    },
+    "distance": {
+      "type": "number",
+      "description": "Distance in miles from the queried address. Negative values indicate N/A."
+    },
+    "Street": {
+      "type": "string",
+      "description": "Street address of the office."
+    }
+  },
+  "required": ["CU_NAME", "CU_NUMBER", "State"],
+  "additionalProperties": true
+}

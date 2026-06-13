@@ -1,0 +1,80 @@
+vocabulary:
+  name: NCUA API Vocabulary
+  description: Domain vocabulary for the National Credit Union Administration (NCUA) APIs, covering credit union data, call reports, locator services, and regulatory concepts.
+  version: 1.0.0
+  provider: National Credit Union Administration (NCUA)
+
+terms:
+  - term: charter_number
+    label: Charter Number
+    definition: A unique numeric identifier assigned by the NCUA to each federally chartered or federally insured credit union. Also referred to as CU_NUMBER.
+    example: "12345"
+
+  - term: call_report
+    label: Call Report (Form 5300)
+    definition: Quarterly financial performance report filed by all federally insured credit unions with the NCUA. Contains data on assets, loans, shares, investments, net income, and membership.
+    aliases:
+      - Form 5300
+      - 5300 Report
+
+  - term: credit_union_office
+    label: Credit Union Office
+    definition: A physical branch or site of a federally insured credit union, including main offices and branch locations. Each office has a unique SiteId.
+
+  - term: site_functions
+    label: Site Functions
+    definition: Services offered at a specific credit union office location. Known values include Member Services, Drive Through, and ATM. Returned as a semicolon-delimited string.
+
+  - term: main_office
+    label: Main Office
+    definition: The primary or headquarters location of a credit union, as indicated by the IsMainOffice boolean field.
+
+  - term: federal_credit_union
+    label: Federal Credit Union (FCU)
+    definition: A credit union chartered under the Federal Credit Union Act and regulated directly by the NCUA.
+    abbreviation: FCU
+
+  - term: federally_insured_state_credit_union
+    label: Federally Insured State Credit Union (FISCU)
+    definition: A state-chartered credit union whose member deposits are insured by the NCUA's National Credit Union Share Insurance Fund (NCUSIF).
+    abbreviation: FISCU
+
+  - term: ncusif
+    label: National Credit Union Share Insurance Fund
+    definition: The fund administered by the NCUA that insures member deposits in federally insured credit unions up to $250,000.
+    abbreviation: NCUSIF
+
+  - term: cuso
+    label: Credit Union Service Organization
+    definition: A company that is owned, in whole or in part, by a credit union and provides services to the credit union or its members. CUSOs are tracked in the NCUA CUSO Registry.
+    abbreviation: CUSO
+
+  - term: peer_group
+    label: Peer Group
+    definition: A classification category used by the NCUA to group credit unions of similar asset size for comparative financial analysis.
+
+  - term: field_of_membership
+    label: Field of Membership
+    definition: The defined group of people eligible to join a particular credit union. May be community-based, employer-based, associational, or other categories.
+    abbreviation: FOM
+
+  - term: low_income_designation
+    label: Low Income Designation
+    definition: A designation granted by the NCUA to credit unions that serve predominantly low-income members, providing access to supplemental capital and expanded eligibility for CDRLF grants and loans.
+    abbreviation: LID
+
+  - term: cuonline
+    label: CUOnline Data Web Service
+    definition: An NCUA bulk data web service providing real-time Call Report financial data as submissions are validated. Designed for large industry data aggregators and requires registration.
+
+  - term: search_radius
+    label: Search Radius
+    definition: The geographic distance in miles used to filter credit union office results when searching by address through the Credit Union Locator API.
+
+  - term: site_id
+    label: Site ID
+    definition: A unique numeric identifier assigned to each individual office or branch location of a credit union within the NCUA locator system.
+
+  - term: quarterly_data
+    label: Quarterly Call Report Data
+    definition: Publicly available financial performance data published quarterly based on 5300 Call Report filings, available as bulk ZIP downloads dating back to March 1994.

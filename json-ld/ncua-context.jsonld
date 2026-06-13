@@ -1,0 +1,136 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "ncua": "https://mapping.ncua.gov/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "CreditUnionOffice": "ncua:CreditUnionOffice",
+    "CreditUnion": "ncua:CreditUnion",
+    "CUSOrganization": "ncua:CUSOrganization",
+    "CallReport": "ncua:CallReport",
+
+    "CU_NAME": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "CU_NUMBER": {
+      "@id": "ncua:charterNumber",
+      "@type": "xsd:integer"
+    },
+    "CU_SITENAME": {
+      "@id": "ncua:siteName",
+      "@type": "xsd:string"
+    },
+    "SiteId": {
+      "@id": "ncua:siteId",
+      "@type": "xsd:integer"
+    },
+    "IsMainOffice": {
+      "@id": "ncua:isMainOffice",
+      "@type": "xsd:boolean"
+    },
+    "SiteFunctions": {
+      "@id": "ncua:siteFunctions",
+      "@type": "xsd:string"
+    },
+    "AddressLatitude": {
+      "@id": "schema:latitude",
+      "@type": "xsd:double"
+    },
+    "AddressLongitude": {
+      "@id": "schema:longitude",
+      "@type": "xsd:double"
+    },
+    "Street": {
+      "@id": "schema:streetAddress",
+      "@type": "xsd:string"
+    },
+    "City": {
+      "@id": "schema:addressLocality",
+      "@type": "xsd:string"
+    },
+    "State": {
+      "@id": "schema:addressRegion",
+      "@type": "xsd:string"
+    },
+    "Zipcode": {
+      "@id": "schema:postalCode",
+      "@type": "xsd:string"
+    },
+    "Country": {
+      "@id": "schema:addressCountry",
+      "@type": "xsd:string"
+    },
+    "Phone": {
+      "@id": "schema:telephone",
+      "@type": "xsd:string"
+    },
+    "URL": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "distance": {
+      "@id": "ncua:distanceMiles",
+      "@type": "xsd:double"
+    },
+
+    "charterNumber": {
+      "@id": "ncua:charterNumber",
+      "@type": "xsd:integer"
+    },
+    "creditUnionType": {
+      "@id": "ncua:creditUnionType",
+      "@type": "xsd:string"
+    },
+    "peerGroup": {
+      "@id": "ncua:peerGroup",
+      "@type": "xsd:string"
+    },
+    "fieldOfMembershipType": {
+      "@id": "ncua:fieldOfMembershipType",
+      "@type": "xsd:string"
+    },
+    "lowIncomeDesignation": {
+      "@id": "ncua:lowIncomeDesignation",
+      "@type": "xsd:boolean"
+    },
+    "memberOfFHLB": {
+      "@id": "ncua:memberOfFHLB",
+      "@type": "xsd:boolean"
+    },
+    "totalAssets": {
+      "@id": "ncua:totalAssets",
+      "@type": "xsd:decimal"
+    },
+    "totalLoans": {
+      "@id": "ncua:totalLoans",
+      "@type": "xsd:decimal"
+    },
+    "totalShares": {
+      "@id": "ncua:totalShares",
+      "@type": "xsd:decimal"
+    },
+    "netIncome": {
+      "@id": "ncua:netIncome",
+      "@type": "xsd:decimal"
+    },
+    "memberCount": {
+      "@id": "ncua:memberCount",
+      "@type": "xsd:integer"
+    },
+    "charterYear": {
+      "@id": "ncua:charterYear",
+      "@type": "xsd:integer"
+    },
+    "dateInsured": {
+      "@id": "ncua:dateInsured",
+      "@type": "xsd:date"
+    },
+    "region": {
+      "@id": "ncua:region",
+      "@type": "xsd:string"
+    }
+  }
+}
