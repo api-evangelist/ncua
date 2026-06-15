@@ -35,5 +35,14 @@
       "date": "2026-06-04",
       "type": "testimony"
     }
-  ]
+  ],
+  "repo": "ncua",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/national-credit-union-administration",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
