@@ -1,48 +1,21 @@
 {
-  "meta": {
-    "source": "https://ncua.gov/news/latest-news",
-    "fetched": "2026-06-13",
-    "provider": "National Credit Union Administration (NCUA)"
-  },
-  "posts": [
-    {
-      "title": "NCUA Releases First Quarter 2026 Credit Union System Performance Data",
-      "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-first-quarter-2026-credit-union-system-performance-data",
-      "date": "2026-06-09",
-      "type": "press-release"
-    },
-    {
-      "title": "NCUA Board Approves Final Rule on Dependent Care and Board Member Reimbursement",
-      "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-approves-final-rule-dependent-care-and-board-member-reimbursement",
-      "date": "2026-06-08",
-      "type": "press-release"
-    },
-    {
-      "title": "NCUA Clarifies Federal Credit Unions' Power",
-      "url": "https://ncua.gov/newsroom/press-release/2026/ncua-clarifies-federal-credit-unions-power",
-      "date": "2026-06-08",
-      "type": "press-release"
-    },
-    {
-      "title": "Federal Prudential Regulators Ask Financial Institutions to Detect and Report Illicit Activity Related to Illegal Aliens",
-      "url": "https://ncua.gov/newsroom/press-release/2026/federal-prudential-regulators-ask-financial-institutions-detect-report-illicit-activity-related-illegal-aliens",
-      "date": "2026-06-05",
-      "type": "press-release"
-    },
-    {
-      "title": "NCUA Chairman Kyle S. Hauptman's Testimony Before the House Financial Services Committee",
-      "url": "https://ncua.gov/newsroom/testimony/2026/ncua-chairman-kyle-s-hauptmans-testimony-house-financial-services-committee",
-      "date": "2026-06-04",
-      "type": "testimony"
-    }
-  ],
   "repo": "ncua",
   "feeds": [
     {
+      "source": "https://ncua.gov/news/latest-news",
+      "feed_url": "",
+      "saved": 3,
+      "method": "agent-scrape"
+    },
+    {
       "source": "https://www.linkedin.com/company/national-credit-union-administration",
-      "error": "HTTPError"
+      "feed_url": "https://www.linkedin.com/company/national-credit-union-administration",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:55:39Z",
+  "post_count": 7,
+  "agent_pulled": "2026-06-27"
 }
