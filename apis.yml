@@ -101,6 +101,10 @@ apis:
       - FN: CUSO Registry
         email: cusoregistry@ncua.gov
 common:
+  - type: VulnerabilityDisclosure
+    url: security/ncua-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/ncua-domain-security.yml
   - type: Website
     url: https://ncua.gov/
   - type: Documentation
