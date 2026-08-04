@@ -1,0 +1,16 @@
+{
+  "provider": "ncua",
+  "sources": [
+    "ncua-findcubyradius-aspx-api-openapi.yml",
+    "ncua-singleresult-aspx-api-openapi.yml"
+  ],
+  "outputs": [
+    "ncua-findcubyradius-aspx-api-openapi.yml",
+    "ncua-singleresult-aspx-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
