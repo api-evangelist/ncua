@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NCUA Credit Union Locator FindCUByRadius.aspx API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "FindCUByRadius.aspx",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for credit union offices",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://mapping.ncua.gov/findCUByRadius.aspx",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "address",
+                  "value": ""
+                },
+                {
+                  "name": "type",
+                  "value": ""
+                },
+                {
+                  "name": "radius",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Search for federally insured credit union offices by credit union name, charter number, or geographic address with an optional radius filter. Returns a JSON array of matching office locations with coordinates and contact details.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

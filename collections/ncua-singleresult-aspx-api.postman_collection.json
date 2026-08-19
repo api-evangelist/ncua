@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "2e92201b-e03e-4881-bb96-3a4cac90485e",
+      "name": "SingleResult.aspx",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "05d0a5e8-f423-49fd-bce6-7d1203c1691e",
+          "name": "Get credit union details by charter number",
+          "request": {
+            "name": "Get credit union details by charter number",
+            "description": {
+              "content": "Retrieve detailed information for a specific credit union by its NCUA charter number. Returns an HTML page with financial summary, membership, and charter information. This endpoint is intended for browser consumption and is used by the Credit Union Locator tool.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "SingleResult.aspx"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "ID",
+                  "value": "<integer>",
+                  "description": "(Required) The NCUA charter number of the credit union."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/html"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3f8080a2-a4d1-44a7-9818-d73616536b41",
+              "name": "HTML page containing credit union details.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SingleResult.aspx"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ID",
+                      "value": "12345"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/html"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/html"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8c1abb8e-396f-4485-bde5-974fa2d9293a",
+              "name": "Internal server error from the NCUA service.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SingleResult.aspx"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "ID",
+                      "value": "12345"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mapping.ncua.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8ce6db58-6b7d-44ea-92f8-26decca28a7f",
+    "name": "NCUA Credit Union Locator FindCUByRadius.aspx SingleResult.aspx API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "A JSON-based API that powers the NCUA Credit Union Locator tool, enabling searches for federally insured credit union offices by name, charter number, and address with radius-based geographic queries. Returns office locations, contact details, coordinates, and site functions. Operated by the National Credit Union Administration (NCUA).\n\n\nContact Support:\n Name: NCUA Help\n Email: OneStop@ncua.gov",
+      "type": "text/plain"
+    }
+  }
+}

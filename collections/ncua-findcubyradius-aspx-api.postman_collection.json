@@ -1,0 +1,220 @@
+{
+  "item": [
+    {
+      "id": "67fae583-822c-480f-8274-4761efee3065",
+      "name": "FindCUByRadius.aspx",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "772fbc44-532f-4bfe-8504-cbc83d773222",
+          "name": "Search for credit union offices",
+          "request": {
+            "name": "Search for credit union offices",
+            "description": {
+              "content": "Search for federally insured credit union offices by credit union name, charter number, or geographic address with an optional radius filter. Returns a JSON array of matching office locations with coordinates and contact details.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "findCUByRadius.aspx"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "(Required) The search value. Depending on `type`, this is a credit union name, charter number, or street address.\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "(Required) The type of search to perform. - `cuname` — search by credit union name - `cunumber` — search by charter number - `address` — search by street address with radius\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "radius",
+                  "value": "100",
+                  "description": "Search radius in miles. Only relevant when `type` is `address`. Defaults to 100 miles if omitted.\n"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2e55d674-9d65-4697-858e-edffde39a140",
+              "name": "A JSON array of credit union offices matching the query.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "findCUByRadius.aspx"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The search value. Depending on `type`, this is a credit union name, charter number, or street address.\n",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "125 Main St., Anywhere, CT"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The type of search to perform. - `cuname` — search by credit union name - `cunumber` — search by charter number - `address` — search by street address with radius\n",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "address"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Search radius in miles. Only relevant when `type` is `address`. Defaults to 100 miles if omitted.\n",
+                        "type": "text/plain"
+                      },
+                      "key": "radius",
+                      "value": "50"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"CU_NAME\": \"Federal Employees Credit Union\",\n    \"AddressLongitude\": -77.036871,\n    \"AddressLatitude\": 38.907192,\n    \"CU_SITENAME\": \"Main Office\",\n    \"CU_NUMBER\": 12345,\n    \"City\": \"Washington\",\n    \"Country\": \"US\",\n    \"IsMainOffice\": true,\n    \"Phone\": \"202-555-0100\",\n    \"SiteFunctions\": \"Member Services;Drive Through\",\n    \"SiteId\": 67890,\n    \"State\": \"DC\",\n    \"URL\": \"https://example.cu.org\",\n    \"Zipcode\": \"20001\",\n    \"distance\": 2.5,\n    \"Street\": \"125 Federal Way\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "17063683-639f-4f6f-86ac-f0f4d98e1c08",
+              "name": "Internal server error from the NCUA service.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "findCUByRadius.aspx"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The search value. Depending on `type`, this is a credit union name, charter number, or street address.\n",
+                        "type": "text/plain"
+                      },
+                      "key": "address",
+                      "value": "125 Main St., Anywhere, CT"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The type of search to perform. - `cuname` — search by credit union name - `cunumber` — search by charter number - `address` — search by street address with radius\n",
+                        "type": "text/plain"
+                      },
+                      "key": "type",
+                      "value": "address"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "Search radius in miles. Only relevant when `type` is `address`. Defaults to 100 miles if omitted.\n",
+                        "type": "text/plain"
+                      },
+                      "key": "radius",
+                      "value": "50"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://mapping.ncua.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b7b15d99-9eca-4096-beb4-664c1001b9ce",
+    "name": "NCUA Credit Union Locator FindCUByRadius.aspx API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "A JSON-based API that powers the NCUA Credit Union Locator tool, enabling searches for federally insured credit union offices by name, charter number, and address with radius-based geographic queries. Returns office locations, contact details, coordinates, and site functions. Operated by the National Credit Union Administration (NCUA).\n\n\nContact Support:\n Name: NCUA Help\n Email: OneStop@ncua.gov",
+      "type": "text/plain"
+    }
+  }
+}

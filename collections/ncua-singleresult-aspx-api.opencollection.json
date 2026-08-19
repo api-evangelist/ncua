@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NCUA Credit Union Locator FindCUByRadius.aspx SingleResult.aspx API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SingleResult.aspx",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get credit union details by charter number",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://mapping.ncua.gov/SingleResult.aspx",
+            "params": [
+              {
+                "name": "ID",
+                "value": "12345",
+                "type": "query",
+                "description": "The NCUA charter number of the credit union."
+              }
+            ]
+          },
+          "docs": "Retrieve detailed information for a specific credit union by its NCUA charter number. Returns an HTML page with financial summary, membership, and charter information. This endpoint is intended for browser consumption and is used by the Credit Union Locator tool.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
