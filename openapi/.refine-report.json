@@ -1,8 +1,7 @@
 {
   "provider": "ncua",
   "sources": [
-    "ncua-findcubyradius-aspx-api-openapi.yml",
-    "ncua-singleresult-aspx-api-openapi.yml"
+    "_original/ncua-credit-union-locator-api-openapi.yml"
   ],
   "outputs": [
     "ncua-findcubyradius-aspx-api-openapi.yml",
@@ -11,6 +10,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "ncua-credit-union-locator-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "ncua-credit-union-locator-api-openapi.yml: tagged paths POST /findCUByRadius.aspx -> FindCUByRadius.aspx",
+    "ncua-credit-union-locator-api-openapi.yml: tagged paths GET /SingleResult.aspx -> SingleResult.aspx",
+    "ncua-credit-union-locator-api-openapi.yml: declared missing tag: FindCUByRadius.aspx",
+    "ncua-credit-union-locator-api-openapi.yml: declared missing tag: SingleResult.aspx",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "ncua-findcubyradius-aspx-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ncua-singleresult-aspx-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

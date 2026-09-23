@@ -1,9 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NCUA Credit Union Locator FindCUByRadius.aspx SingleResult.aspx API
-  description: 'A JSON-based API that powers the NCUA Credit Union Locator tool, enabling searches for federally insured credit union offices by name, charter number, and address with radius-based geographic queries. Returns office locations, contact details, coordinates, and site functions. Operated by the National Credit Union Administration (NCUA).
-
-    '
+  title: NCUA Credit Union Locator Single Result.aspx API
+  description: A JSON-based API that powers the NCUA Credit Union Locator tool, enabling searches for federally insured credit union offices by name, charter number, and address with radius-based geographic queries. Returns office locations, contact details, coordinates, and site functions. Operated by the National Credit Union Administration (NCUA).
   version: 1.0.0
   contact:
     name: NCUA Help
@@ -21,9 +19,7 @@ paths:
     get:
       operationId: getCreditUnionDetails
       summary: Get credit union details by charter number
-      description: 'Retrieve detailed information for a specific credit union by its NCUA charter number. Returns an HTML page with financial summary, membership, and charter information. This endpoint is intended for browser consumption and is used by the Credit Union Locator tool.
-
-        '
+      description: Retrieve detailed information for a specific credit union by its NCUA charter number. Returns an HTML page with financial summary, membership, and charter information. This endpoint is intended for browser consumption and is used by the Credit Union Locator tool.
       parameters:
       - name: ID
         in: query
