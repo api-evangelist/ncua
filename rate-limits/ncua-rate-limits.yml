@@ -1,3 +1,8 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (dated 2026-06-13 by the file itself), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
+generated: '2026-06-13'
 name: NCUA Rate Limits
 description: The National Credit Union Administration (NCUA) does not publicly publish formal rate limits for its public-facing data tools and APIs. The public tools (credit union locator, custom query, quarterly data downloads, CUSO registry) are accessible without authentication and without documented rate caps. The CUOnline bulk data web service, which requires registration, is subject to time restrictions defined in NCUA's Rules of Behavior.
 url: https://ncua.gov/data
