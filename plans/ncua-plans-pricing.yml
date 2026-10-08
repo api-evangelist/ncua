@@ -40,3 +40,22 @@ plans:
     contact:
       email: 5300@ncua.gov
       description: Contact to initiate registration and receive Rules of Behavior documentation
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Public Access - No Cost
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: CUOnline Bulk Data Web Service - Registered
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
