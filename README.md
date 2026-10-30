@@ -64,53 +64,146 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The National Credit Union Administration (NCUA) is the independent federal agency created by the U.S. Congress to regulate, charter, and supervise federal credit unions. With the backing of the full faith and credit of the U.S. Government, NCUA operates and manages the National Credit Union Share Insurance Fund, insuring the deposits of account holders in all federal credit unions and the overwhelming majority of state-chartered credit unions.
+The National Credit Union Administration (NCUA) is the independent federal agency that regulates, charters, and supervises federal credit unions. NCUA provides public REST APIs and data services for accessing credit union call report data, financial performance metrics, membership statistics, credit union locator information, and NCUA examination and enforcement findings.
 
-## APIs and Data Services
+**Areas:** Federal Government · Credit Union · Financial Data · Call Reports · Banking · Regulatory Data
 
-NCUA provides several public data APIs and tools for accessing credit union financial data:
+## National Credit Union Administration (NCUA) on APIs.io
 
-### Credit Union Locator API
-A JSON-based API powering the NCUA Credit Union Locator tool at mapping.ncua.gov. Supports searching credit union offices by name, charter number, or address with radius-based geographic filtering. Returns office locations, coordinates, contact details, and site functions.
+Everything profiled for National Credit Union Administration (NCUA) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ncua/](https://apis.io/providers/ncua/)** — or go straight to one of the APIs or properties below.
 
-- **URL:** https://mapping.ncua.gov/
+### APIs (6)
 
-### 5300 Call Report Quarterly Data
-Publicly available financial performance data for all federally insured credit unions based on their quarterly Call Report (Form 5300) filings. Available as bulk ZIP downloads in comma-delimited text format from March 1994 to present.
+- [NCUA 5300 Call Report Data](https://apis.io/apis/ncua/call-report-data-api/) — Quarterly publicly available financial performance data for all federally insured credit unions based on their quarterly Call Report (Form 5300) filings.…
+- [NCUA Custom Data Query Tool](https://apis.io/apis/ncua/custom-query-api/) — An interactive web application allowing users to query and filter financial information collected during the 5300 Call Report cycle. Supports filtering by…
+- [NCUA CUOnline Data Web Service](https://apis.io/apis/ncua/cuonline-data-web-service/) — A bulk data web service providing the same financial data as the quarterly Call Report ZIP files but in a dynamic, real-time fashion as submissions are…
+- [NCUA CUSO Registry](https://apis.io/apis/ncua/cuso-registry-api/) — A web-based system and searchable registry of Credit Union Service Organizations (CUSOs) that provide information about their services, financials, and…
+- [National Credit Union Administration (NCUA) FindCUByRadius.aspx API](https://apis.io/apis/ncua/ncua-findcubyradius-aspx-api/) — The FindCUByRadius.aspx API from National Credit Union Administration (NCUA) — 1 operation(s) for findcubyradius.aspx.
+- [National Credit Union Administration (NCUA) SingleResult.aspx API](https://apis.io/apis/ncua/ncua-singleresult-aspx-api/) — The SingleResult.aspx API from National Credit Union Administration (NCUA) — 1 operation(s) for singleresult.aspx.
 
-- **URL:** https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data
-- **Contact:** 5300@ncua.gov
+### Published properties
 
-### Custom Data Query Tool
-An interactive tool for querying financial information from the 5300 Call Report cycle. Filter by charter number, region, type, city, state, zip, assets, loans, shares, investments, and net income across reporting cycles back to 2004.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **URL:** https://webapps2.ncua.gov/CustomQuery/
+#### Agentic access (1)
 
-### CUOnline Data Web Service
-A bulk data web service providing real-time access to call report data for registered industry data aggregators. Requires registration with NCUA including a technical point of contact and static IP address.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **URL:** https://ncua.gov/regulation-supervision/regulatory-reporting/cuonline
-- **Contact:** 5300@ncua.gov
+- [Ncua Agentic Access](https://apis.io/agentic-access/ncua/ncua-agentic-access/)
 
-### CUSO Registry
-Searchable public registry of Credit Union Service Organizations (CUSOs), their services, financial relationships, and affiliated credit unions.
+#### JSON Schema (1)
 
-- **URL:** https://cusoregistry.ncua.gov/Search/Search
+The data models the API reads and writes.
 
-## Links
+- [NCUA Credit Union Office](https://apis.io/schemas/ncua/ncua-credit-union-office/)
 
-- **Website:** https://ncua.gov/
-- **Open Data:** https://ncua.gov/data
-- **Newsroom/Blog:** https://ncua.gov/news/latest-news
-- **LinkedIn:** https://www.linkedin.com/company/national-credit-union-administration
-- **X (Twitter):** https://x.com/TheNCUA
+#### JSON-LD (1)
 
-## Pricing
+Linked-data contexts for the provider's vocabulary.
 
-All NCUA data services are free of charge. The CUOnline bulk web service is also free but requires registration.
+- [Ncua Context](https://apis.io/jsonld/ncua/ncua-context/)
 
-## Contact
+#### Vocabulary (1)
 
-- **General Data:** BImail@ncua.gov
-- **Call Report / CUOnline:** 5300@ncua.gov
-- **Technical Support:** OneStop@ncua.gov | 1-800-827-3255
+The provider's domain terms, defined.
+
+- [NCUA API Vocabulary](https://apis.io/vocabularies/ncua/ncua-vocabulary/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [NCUA Credit Union Locator FindCUByRadius.aspx API](https://apis.io/collections/ncua/open-ncua-findcubyradius-aspx-api/)
+- [NCUA Credit Union Locator FindCUByRadius.aspx SingleResult.aspx API](https://apis.io/collections/ncua/open-ncua-singleresult-aspx-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [National Credit Union Administration (NCUA) — jsonschema rules](https://apis.io/rules/ncua/ncua-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ncua Domain Security](https://apis.io/security/ncua/ncua-domain-security/)
+- [Ncua Vulnerability Disclosure](https://apis.io/security/ncua/ncua-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Ncua Plans Pricing](https://apis.io/plans/ncua/ncua-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Ncua Rate Limits](https://apis.io/rate-limits/ncua/ncua-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Ncua Finops](https://apis.io/finops/ncua/ncua-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://ncua.gov/)
+- [Documentation](https://ncua.gov/data)
+- [Blog](https://ncua.gov/news/latest-news)
+
+## API Evangelist rating
+
+**Kin Score 25.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 51.4 |
+| Contract governance | 9.8 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 15.8 |
+
+**Agent readiness 20.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.4** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ncua/](https://apis.io/providers/ncua/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for National Credit Union Administration (NCUA): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ncua/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
